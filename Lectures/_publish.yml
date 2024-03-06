@@ -1,0 +1,4 @@
+- source: Demo.qmd
+  quarto-pub:
+    - id: 880f1fc5-42aa-438a-a7f6-486fe49550da
+      url: 'https://tupkalenkodi.quarto.pub/learning-quarto'
