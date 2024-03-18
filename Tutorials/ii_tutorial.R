@@ -12,7 +12,7 @@ colnames(df1) = c("Name", "Surname", "Gender")
 year =  c(88, 80, 75)
 df1 = cbind(df1, year)
 df1 = rbind(df1, c("Ademir", "Hujdurovic",
-                   TRUE,87))
+                    TRUE,87))
 
 
 
@@ -54,7 +54,7 @@ children = sample(0:6, 65, replace=T)
 children_factor = cut(children,
                       breaks = c(-Inf, 0, 1, 2, Inf),
                       labels = c("0", "1", ">=2",
-                                 ordered_result = T))
+                      ordered_result = T))
 
 #3
 drinks = factor(rep(c("Coffee",
