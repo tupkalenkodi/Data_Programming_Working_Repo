@@ -1,0 +1,39 @@
+
+
+snippet fragment
+	[${1:text}]{.${2:type}}
+	
+snippet aside
+	[${1:text}]{.aside}
+	
+snippet fence
+	:::{.${1:type}}
+		${2:body}
+	:::
+
+snippet panel
+	::: {.panel-tabset}
+		${1:body}
+	:::
+	
+snippet column
+	:::: {.columns}
+
+	::: {.column width="50%"}
+	Left column
+	:::
+
+	::: {.column width="50%"}
+	Right column
+	:::
+
+	::::
+	
+snippet tabset
+	::: {.panel-tabset}
+	${1:## EN}
+	text
+	
+	${2:## SLO}
+	tekst
+	:::

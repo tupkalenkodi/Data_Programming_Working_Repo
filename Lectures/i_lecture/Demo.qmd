@@ -16,21 +16,20 @@ execute:
     warning: false
     messages: false
     error: true
-
 ---
 
-::: {.callout-note}
+::: callout-note
 Note that this document can only be used for the learning purpose.
 :::
 
 ### Loading packages
+
 ```{r}
 library(tidyverse)
 library(knitr)
 library(gt)
 
 ```
-
 
 ```{r}
 #| echo: false
@@ -41,7 +40,6 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
   geom_point() +
   geom_smooth(formula = y ~ x, method = "loess")
 ```
-
 
 ::: columns
 ::: {.column width="35%"}
@@ -54,23 +52,23 @@ The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel
 :::
 
 ::: {.column width="62%"}
-::: {.cell}
-::: {.cell-output-display}
-|                  |  mpg| cyl| disp|  hp|    wt|
-|:-----------------|----:|---:|----:|---:|-----:|
-|Mazda RX4         | 21.0|   6|  160| 110| 2.620|
-|Mazda RX4 Wag     | 21.0|   6|  160| 110| 2.875|
-|Datsun 710        | 22.8|   4|  108|  93| 2.320|
-|Hornet 4 Drive    | 21.4|   6|  258| 110| 3.215|
-|Hornet Sportabout | 18.7|   8|  360| 175| 3.440|
-|Valiant           | 18.1|   6|  225| 105| 3.460|
+::: cell
+::: cell-output-display
+|                   |  mpg | cyl | disp |  hp |    wt |
+|:------------------|-----:|----:|-----:|----:|------:|
+| Mazda RX4         | 21.0 |   6 |  160 | 110 | 2.620 |
+| Mazda RX4 Wag     | 21.0 |   6 |  160 | 110 | 2.875 |
+| Datsun 710        | 22.8 |   4 |  108 |  93 | 2.320 |
+| Hornet 4 Drive    | 21.4 |   6 |  258 | 110 | 3.215 |
+| Hornet Sportabout | 18.7 |   8 |  360 | 175 | 3.440 |
+| Valiant           | 18.1 |   6 |  225 | 105 | 3.460 |
 :::
 :::
 :::
 :::
-
 
 ### Columns
+
 ::: columns
 ::: {.column width="50%"}
 ```{r}
@@ -89,8 +87,8 @@ airquality %>%
 :::
 :::
 
-
 ### Cross referencing a table
+
 ```{r}
 #| label: tbl-airquality
 #| tbl-cap: "The airquality in New York in 1973"
@@ -99,10 +97,11 @@ airquality %>%
    head() %>% 
    gt()
 ```
+
 In the table @tbl-airquality we collected data for 5 months.
 
-
 ### Cross referencing a chart.
+
 ```{r}
 #| label: fig-airquality
 #| fig-cap: "Ozone vs. temp"
@@ -112,22 +111,25 @@ airquality %>%
    ggplot(., aes(x=Temp, y=Ozone))+
    geom_point()
 ```
+
 The chart @fig-airquality shows the relationship between Ozone and Temp.
 
-
 ### Cross referencing a figure
+
 ![Eiffel Tower](./random_image.jpg){#fig-tower}
 
 Look the Eiffel Tower @fig-tower.
 
-
 ### Mtcars
-::: {.panel-tabset}
+
+::: panel-tabset
 ## Dummy1
+
 ```{r}
 ```
 
 ## mtcars
+
 ```{r}
 mtcars %>% 
         head() %>% 
@@ -135,33 +137,29 @@ mtcars %>%
 ```
 
 ## Dummy2
+
 ```{r}
 ```
 :::
 
-
-
-::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`.
+::: callout-note
+Note that there are five types of callouts, including: `note`, `warning`, `important`, `tip`, and `caution`.
 :::
 
-::: {.callout-tip}
+::: callout-tip
 ## Tip with Title
 
 This is an example of a callout with a title.
 :::
 
-::: {.callout-warning}
+::: callout-warning
 ## Standardization
 
 This is an example of a warning.
 :::
-
 
 ```{r}
 #| cache: true
 
 Sys.sleep(5)
 ```
-
